@@ -1,5 +1,5 @@
 # CMake Project Template
-This is a Qt GUI project template what using CMake & MinGW to build.
+This is a Qt GUI project template with CMake & MinGW to build.
 
 ## Environment
 - Windows 10 or later
