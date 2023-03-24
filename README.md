@@ -1,4 +1,4 @@
-# CMake Project Template
+# Qt Project Template
 This is a Qt GUI project template with CMake & MinGW
 
 ## Environment
