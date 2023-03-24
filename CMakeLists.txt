@@ -2,29 +2,19 @@ cmake_minimum_required(VERSION 3.5)
 
 project(Qt_ProjectTemplate LANGUAGES CXX)
 
-set(CMAKE_BUILD_TYPE "Debug")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/bin)
-
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set Qt path and version
-set(QT_DIR "C:/path/Qt/6.4.1/mingw_64")
+set(QT_DIR "C:/path/Qt/6.4.3/mingw_64")
 set(QT_VERSION 6)
 
-set(Qt${QT_VERSION}_DIR ${QT_DIR}/lib/cmake/Qt6)
-set(Qt${QT_VERSION}CoreTools_DIR ${QT_DIR}/lib/cmake/Qt6CoreTools)
-set(Qt${QT_VERSION}GuiTools_DIR ${QT_DIR}/lib/cmake/Qt6GuiTools)
+set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/bin)
+set(CMAKE_PREFIX_PATH ${QT_DIR}/lib/cmake)
+set(CMAKE_AUTOMOC ON)
 
 find_package(Qt${QT_VERSION} REQUIRED COMPONENTS Widgets)
-
-# set(3RDPARTY_DIR ${PROJECT_SOURCE_DIR}/3rdparty)
-
-include_directories(${QT_DIR}/include)
 
 aux_source_directory(src PROJECT_SOURCES)
 
