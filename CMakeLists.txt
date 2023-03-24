@@ -46,7 +46,4 @@ add_custom_command(
     COMMAND ${CMAKE_COMMAND} -E copy
         "${QT_DIR}/bin/Qt${QT_VERSION}Widgets.dll"
         "$<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/"
-    COMMAND ${CMAKE_COMMAND} -E copy
-        "${QT_DIR}/bin/Qt${QT_VERSION}Widgets.dll"
-        "$<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>/"
 )
